@@ -9,14 +9,3 @@ export const load: PageServerLoad = async ({ fetch, url }) => {
 		movies: movies.results
 	};
 };
-
-import { redirect, type Actions } from '@sveltejs/kit';
-export const actions: Actions = {
-	default: async ({ request, locals }) => {
-		const data = await request.formData();
-		const key = data.get('key') as string;
-		if (key) {
-			throw redirect(300, `/search/?key=${key}`);
-		}
-	}
-};

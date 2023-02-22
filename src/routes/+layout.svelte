@@ -4,7 +4,7 @@
 
 <nav>
 	<a href="/"> Home</a>
-	<form action="/search" method="POST" use:enhance>
+	<form action="/search" use:enhance>
 		<input type="text" name="key" placeholder="Search" />
 		<button>Search</button>
 	</form>
